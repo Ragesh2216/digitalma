@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login — PixelRise Digital Marketing Portal</title>
+  <meta name="description" content="Access PixelRise Digital's marketing portal. Sign in as campaign manager or client to reach your marketing dashboard." />
+  <link rel="stylesheet" href="css/style.css" /><link rel="stylesheet" href="css/responsive.css" />
+  <style>
+    .auth-page{min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--gradient-hero);position:relative;overflow:hidden;padding:calc(var(--nav-height) + 40px) 5% 60px;}
+    .auth-page::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(0,212,170,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,170,0.03) 1px,transparent 1px);background-size:60px 60px;}
+    .auth-container{display:grid;grid-template-columns:1fr 1fr;gap:60px;max-width:1000px;width:100%;z-index:2;}
+    @media(max-width:768px){.auth-container{grid-template-columns:1fr;}.auth-info{display:none;}}
+    .auth-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:44px 40px;}
+    @media(max-width:480px){.auth-card{padding:32px 24px;}}
+    .portal-tabs{display:flex;gap:4px;background:var(--bg-dark);border-radius:var(--radius-sm);padding:4px;margin-bottom:28px;}
+    .portal-tab{flex:1;padding:9px 6px;text-align:center;border-radius:calc(var(--radius-sm) - 2px);font-size:0.82rem;font-weight:600;cursor:pointer;transition:var(--transition);color:var(--text-secondary);border:none;background:none;}
+    .portal-tab.active{background:var(--gradient-primary);color:#fff;}
+    .auth-form{display:none;}.auth-form.active{display:block;}
+    .portal-type-badge{display:inline-flex;align-items:center;gap:8px;background:var(--bg-glass2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 14px;font-size:0.8rem;color:var(--text-secondary);margin-bottom:20px;}
+    .password-wrap{position:relative;}
+    .password-toggle{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:1rem;}
+  </style>
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand"><img src="logo.webp" alt="PixelRise Digital" style="height:36px; width:auto;"></a>
+  <div class="navbar-links">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+    <a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+    <div style="display:flex; gap:10px; margin-left:14px;">
+      <a href="login.html" class="btn btn-ghost btn-sm" style="padding:7px 16px; border-radius:var(--radius-pill);">Login</a>
+      <a href="register.html" class="btn btn-primary btn-sm" style="padding:7px 16px; border-radius:var(--radius-pill);">Get Started</a>
+    </div>
+  </div>
+  <button class="navbar-mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
+</nav>
+<div class="navbar-mobile" id="mobileNav">
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+  <a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+  <div class="mobile-access-section" style="display:flex;flex-direction:column;gap:10px;padding:15px;border-top:1px solid rgba(255,255,255,0.05);margin-top:10px;">
+    <a href="login.html" class="btn btn-outline" style="width:100%;justify-content:center;">Login</a>
+    <a href="register.html" class="btn btn-primary" style="width:100%;justify-content:center;">Get Started</a>
+  </div>
+</div>
+
+<div class="auth-page">
+  <div style="position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(0,212,170,0.08) 0%,transparent 70%);pointer-events:none;"></div>
+  <div style="position:absolute;bottom:-100px;left:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(124,58,237,0.07) 0%,transparent 70%);pointer-events:none;"></div>
+  <div class="auth-container">
+    <div class="auth-info" style="display:flex;flex-direction:column;justify-content:center;gap:32px;">
+      <div>
+        <div class="section-tag" style="margin-bottom:16px;">Marketing Portal</div>
+        <h2 style="font-family:var(--font-heading);font-size:2.2rem;font-weight:700;line-height:1.2;margin-bottom:16px;">
+          One platform for<br><span style="background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">all your marketing needs</span>
+        </h2>
+        <p style="color:var(--text-secondary);line-height:1.7;">Campaign managers and brand clients — access your marketing dashboards, SEO reports, ad performance metrics, and campaign workflows from a single secure portal.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="display:flex;align-items:center;gap:14px;">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--gradient-primary);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">📊</div>
+          <div><div style="font-size:0.9rem;font-weight:600;">Campaign Command Centre</div><div style="font-size:0.8rem;color:var(--text-muted);">Live campaign metrics, SEO rankings, and ad spend management</div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--gradient-primary);display:flex;align-items:center;justify-content:center;flex-shrink:0;">👤</div>
+          <div><div style="font-size:0.9rem;font-weight:600;">Client Marketing Portal</div><div style="font-size:0.8rem;color:var(--text-muted);">View your campaign performance, leads, and monthly reports</div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--gradient-primary);display:flex;align-items:center;justify-content:center;flex-shrink:0;">🔒</div>
+          <div><div style="font-size:0.9rem;font-weight:600;">Google Partner Certified</div><div style="font-size:0.8rem;color:var(--text-muted);">AES-256 encryption · Role-based access · Audit trail</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="auth-card">
+      <div class="portal-tabs">
+        <button class="portal-tab active" id="tabAdmin">Campaign Manager</button>
+        <button class="portal-tab" id="tabCustomer">Client Login</button>
+      </div>
+      <div class="auth-form active" id="formAdmin">
+        <div class="portal-type-badge">📊 Campaign Manager Portal</div>
+        <form id="adminLoginForm">
+          <div class="form-group"><label class="form-label">Staff ID / Employee Code *</label><input type="text" class="form-control" placeholder="PRD-MKT-0042" required /></div>
+          <div class="form-group"><label class="form-label">Password *</label>
+            <div class="password-wrap">
+              <input type="password" id="adminPassword" class="form-control" placeholder="Min. 6 characters" required minlength="6" style="padding-right:44px;" />
+              <button type="button" class="password-toggle" onclick="const f=this.previousElementSibling;f.type=f.type==='password'?'text':'password'">👁</button>
+            </div>
+          </div>
+          <div class="form-success" style="display:none;padding:10px;background:rgba(34,197,94,0.1);border:1px solid #22c55e;border-radius:var(--radius-sm);color:#22c55e;font-size:0.86rem;margin-bottom:12px;">✓ Access granted! Redirecting to Campaign Centre…</div>
+          <div id="adminPwError" style="display:none;padding:10px;background:rgba(239,68,68,0.1);border:1px solid #ef4444;border-radius:var(--radius-sm);color:#ef4444;font-size:0.86rem;margin-bottom:12px;">⚠ Password must be at least 6 characters.</div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Sign In as Campaign Manager →</button>
+        </form>
+        <p style="text-align:center;font-size:0.78rem;color:var(--text-muted);margin-top:16px;">Need staff access? <a href="contact.html" style="color:var(--primary);">Contact Marketing Team</a></p>
+      </div>
+      <div class="auth-form" id="formCustomer">
+        <div class="portal-type-badge">👤 Client Marketing Portal</div>
+        <form id="customerLoginForm">
+          <div class="form-group"><label class="form-label">Email *</label><input type="email" class="form-control" placeholder="client@yourbrand.com" required /></div>
+          <div class="form-group"><label class="form-label">Password *</label>
+            <div class="password-wrap">
+              <input type="password" id="customerPassword" class="form-control" placeholder="Min. 6 characters" required minlength="6" style="padding-right:44px;" />
+              <button type="button" class="password-toggle" onclick="const f=this.previousElementSibling;f.type=f.type==='password'?'text':'password'">👁</button>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:flex-end;margin-bottom:16px;"><a href="404.html" style="font-size:0.8rem;color:var(--primary);">Forgot password?</a></div>
+          <div class="form-success" style="display:none;padding:10px;background:rgba(34,197,94,0.1);border:1px solid #22c55e;border-radius:var(--radius-sm);color:#22c55e;font-size:0.86rem;margin-bottom:12px;">✓ Signed in! Redirecting to your Marketing Dashboard…</div>
+          <div id="customerPwError" style="display:none;padding:10px;background:rgba(239,68,68,0.1);border:1px solid #ef4444;border-radius:var(--radius-sm);color:#ef4444;font-size:0.86rem;margin-bottom:12px;">⚠ Password must be at least 6 characters.</div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Sign In →</button>
+        </form>
+        <div style="margin-top:24px;text-align:center;font-size:0.85rem;color:var(--text-secondary);">
+          Don't have an account? <a href="register.html" style="color:var(--primary);font-weight:600;">Register here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+  const tabs={tabAdmin:'formAdmin',tabCustomer:'formCustomer'};
+  Object.keys(tabs).forEach(tid=>{document.getElementById(tid).addEventListener('click',()=>{Object.keys(tabs).forEach(t=>{document.getElementById(t).classList.remove('active');document.getElementById(tabs[t]).classList.remove('active');});document.getElementById(tid).classList.add('active');document.getElementById(tabs[tid]).classList.add('active');});});
+  const urlType=new URLSearchParams(window.location.search).get('type');
+  if(urlType==='customer'){document.getElementById('tabCustomer').click();}else if(urlType==='admin'){document.getElementById('tabAdmin').click();}
+  document.getElementById('adminLoginForm').addEventListener('submit',function(e){e.preventDefault();const pw=document.getElementById('adminPassword').value;const errEl=document.getElementById('adminPwError');if(pw.length<6){errEl.style.display='block';return;}errEl.style.display='none';const staffId=this.querySelector('input[type="text"]').value;this.querySelector('.form-success').style.display='block';this.querySelector('button[type="submit"]').disabled=true;setTimeout(()=>window.location.href=`dashboard.html?email=${encodeURIComponent(staffId)}`,1200);});
+  document.getElementById('customerLoginForm').addEventListener('submit',function(e){e.preventDefault();const pw=document.getElementById('customerPassword').value;const errEl=document.getElementById('customerPwError');if(pw.length<6){errEl.style.display='block';return;}errEl.style.display='none';const email=this.querySelector('input[type="email"]').value;this.querySelector('.form-success').style.display='block';this.querySelector('button[type="submit"]').disabled=true;setTimeout(()=>window.location.href=`dashboard2.html?email=${encodeURIComponent(email)}`,1200);});
+  const dt=document.getElementById('dropdownTrigger'),nd=document.getElementById('navDropdown');
+  if(dt){dt.addEventListener('click',e=>{e.stopPropagation();nd.classList.toggle('open')});document.addEventListener('click',()=>nd.classList.remove('open'));}
+</script>
+</body></html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Marketing Dashboard — PixelRise Digital</title>
+  <meta name="description" content="Your PixelRise Digital client dashboard — campaign performance, lead analytics, SEO rankings, ad spend, and monthly reports." />
+  <link rel="stylesheet" href="css/style.css" /><link rel="stylesheet" href="css/responsive.css" />
+  <style>body{background:var(--bg-dark);} .sidebar-logo{font-family:var(--font-heading);font-size:1.2rem;font-weight:700;background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:32px;display:flex;align-items:center;gap:8px;} .sidebar-section-title{font-size:0.7rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--text-muted);margin:20px 0 8px 14px;} .map-grid{display:grid;grid-template-columns:repeat(10,1fr);gap:3px;margin:0 auto;max-width:400px;} .map-cell{width:100%;aspect-ratio:1;border-radius:2px;background:rgba(0,212,170,0.08);transition:var(--transition);cursor:pointer;} .map-cell.hot1{background:rgba(0,212,170,0.2);}.map-cell.hot2{background:rgba(0,212,170,0.4);}.map-cell.hot3{background:rgba(0,212,170,0.65);}.map-cell.hot4{background:rgba(0,212,170,0.9);}.map-cell:hover{transform:scale(1.3);z-index:10;}</style>
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand"><img src="logo.webp" alt="PixelRise Digital" style="height:36px; width:auto;"></a>
+  <div class="navbar-links">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+    <a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+    <div style="display:flex; gap:10px; margin-left:14px;">
+      <a href="login.html" class="btn btn-ghost btn-sm" style="padding:7px 16px; border-radius:var(--radius-pill);">Login</a>
+      <a href="register.html" class="btn btn-primary btn-sm" style="padding:7px 16px; border-radius:var(--radius-pill);">Get Started</a>
+    </div>
+  </div>
+  <button class="navbar-mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
+</nav>
+<div class="navbar-mobile" id="mobileNav">
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+  <a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+  <div class="mobile-access-section" style="display:flex; flex-direction:column; gap:10px; padding:15px; border-top:1px solid rgba(255,255,255,0.05); margin-top:10px;">
+    <a href="login.html" class="btn btn-outline" style="width:100%; justify-content:center;">Login</a>
+    <a href="register.html" class="btn btn-primary" style="width:100%; justify-content:center;">Get Started</a>
+  </div>
+</div>
+
+<div class="dashboard-layout">
+  <aside class="dashboard-sidebar">
+    <div class="sidebar-logo"><span>⬡</span> PixelRise</div>
+    <div class="sidebar-section-title">My Account</div>
+    <a href="dashboard2.html" class="sidebar-nav-item active"><span class="icon">📈</span> My Dashboard</a>
+    <a href="404.html" class="sidebar-nav-item"><span class="icon">📊</span> Campaign Reports</a>
+    <div class="sidebar-section-title">Channels</div>
+    <a href="404.html" class="sidebar-nav-item"><span class="icon">🔍</span> SEO Performance</a>
+    <a href="404.html" class="sidebar-nav-item"><span class="icon">💰</span> PPC Analytics</a>
+    <a href="404.html" class="sidebar-nav-item"><span class="icon">📱</span> Social Insights</a>
+    <a href="404.html" class="sidebar-nav-item"><span class="icon">📧</span> Email Stats</a>
+    <div class="sidebar-section-title">Documents</div>
+    <a href="404.html" class="sidebar-nav-item"><span class="icon">📋</span> Monthly Reports</a>
+    <a href="404.html" class="sidebar-nav-item"><span class="icon">💳</span> Billing</a>
+    <div class="sidebar-section-title">Support</div>
+    <a href="contact.html" class="sidebar-nav-item"><span class="icon">✉️</span> Contact Manager</a>
+    <a href="login.html" class="sidebar-nav-item"><span class="icon">🔑</span> Sign Out</a>
+  </aside>
+
+  <main class="dashboard-main">
+    <div class="dashboard-header" style="display:flex; justify-content:space-between; align-items:flex-start;">
+      <div>
+        <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="dashboard2.html">Dashboard</a><span>/</span><span>My Marketing Analytics</span></div>
+        <h1 class="dashboard-title">My Marketing Dashboard</h1>
+        <p class="dashboard-subtitle">Your campaign performance &amp; growth metrics · <span id="lastUpdated2"></span></p>
+      </div>
+      <div id="userProfile" style="display:flex; align-items:center; gap:12px; background:var(--bg-card); padding:8px 16px; border-radius:var(--radius-pill); border:1px solid var(--border);">
+        <div style="width:32px; height:32px; border-radius:50%; background:linear-gradient(135deg,#7c3aed,#a78bfa); display:flex; align-items:center; justify-content:center; font-weight:700; color:#fff;" id="userInitial">C</div>
+        <div style="font-size:0.85rem; font-weight:600; color:var(--text-primary);" id="userEmailDisplay">client@yourbrand.com</div>
+      </div>
+    </div>
+
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-label">Monthly Website Sessions</div>
+        <div class="metric-value" data-target="58420" style="-webkit-text-fill-color:initial;">0</div>
+        <div class="metric-change up">↑ 38% vs last month</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Total Leads (Month)</div>
+        <div class="metric-value" data-target="420" style="-webkit-text-fill-color:initial;">0</div>
+        <div class="metric-change up">↑ 23% vs last month</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Campaign ROAS</div>
+        <div class="metric-value" style="color:#22c55e;-webkit-text-fill-color:#22c55e;">5.2x</div>
+        <div class="metric-change up">↑ Above 4x target</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-label">Monthly Ad Spend</div>
+        <div class="metric-value" style="-webkit-text-fill-color:initial;">₹1.2L</div>
+        <div class="metric-change up">↑ 100% within budget</div>
+      </div>
+    </div>
+
+    <!-- Traffic + Channel Distribution -->
+    <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:20px;margin-bottom:24px;">
+      <div class="chart-container reveal">
+        <div class="chart-title">Traffic by Channel</div>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <div><div style="display:flex;justify-content:space-between;font-size:0.82rem;color:var(--text-secondary);margin-bottom:5px;"><span>🔍 Organic SEO</span><span style="color:var(--primary);">44%</span></div><div style="height:8px;background:var(--border);border-radius:4px;overflow:hidden;"><div style="height:100%;width:44%;background:var(--gradient-primary);border-radius:4px;"></div></div></div>
+          <div><div style="display:flex;justify-content:space-between;font-size:0.82rem;color:var(--text-secondary);margin-bottom:5px;"><span>💰 Paid Search (PPC)</span><span style="color:var(--secondary-light);">32%</span></div><div style="height:8px;background:var(--border);border-radius:4px;overflow:hidden;"><div style="height:100%;width:32%;background:linear-gradient(135deg,#7c3aed,#a78bfa);border-radius:4px;"></div></div></div>
+          <div><div style="display:flex;justify-content:space-between;font-size:0.82rem;color:var(--text-secondary);margin-bottom:5px;"><span>📱 Social Media</span><span style="color:var(--accent);">15%</span></div><div style="height:8px;background:var(--border);border-radius:4px;overflow:hidden;"><div style="height:100%;width:15%;background:linear-gradient(135deg,#06b6d4,#0ea5e9);border-radius:4px;"></div></div></div>
+          <div><div style="display:flex;justify-content:space-between;font-size:0.82rem;color:var(--text-secondary);margin-bottom:5px;"><span>📧 Email</span><span style="color:var(--accent2);">6%</span></div><div style="height:8px;background:var(--border);border-radius:4px;overflow:hidden;"><div style="height:100%;width:6%;background:linear-gradient(135deg,#f59e0b,#fbbf24);border-radius:4px;"></div></div></div>
+          <div><div style="display:flex;justify-content:space-between;font-size:0.82rem;color:var(--text-secondary);margin-bottom:5px;"><span>🔗 Direct / Referral</span><span style="color:#22c55e;">3%</span></div><div style="height:8px;background:var(--border);border-radius:4px;overflow:hidden;"><div style="height:100%;width:3%;background:linear-gradient(135deg,#22c55e,#4ade80);border-radius:4px;"></div></div></div>
+        </div>
+      </div>
+      <div class="chart-container reveal reveal-delay-1">
+        <div class="chart-title">Website Traffic — 2025</div>
+        <div class="chart-bars" style="height:180px;">
+          <div class="chart-bar" style="height:35%;" title="Jan: 22K"></div>
+          <div class="chart-bar" style="height:42%;" title="Feb: 26K"></div>
+          <div class="chart-bar" style="height:50%;" title="Mar: 31K"></div>
+          <div class="chart-bar" style="height:58%;" title="Apr: 36K"></div>
+          <div class="chart-bar" style="height:65%;" title="May: 40K"></div>
+          <div class="chart-bar" style="height:72%;" title="Jun: 44K"></div>
+          <div class="chart-bar" style="height:80%;" title="Jul: 49K"></div>
+          <div class="chart-bar" style="height:76%;" title="Aug: 47K"></div>
+          <div class="chart-bar" style="height:68%;" title="Sep: 42K"></div>
+          <div class="chart-bar" style="height:84%;" title="Oct: 52K"></div>
+          <div class="chart-bar" style="height:92%;" title="Nov: 56K"></div>
+          <div class="chart-bar" style="height:100%;" title="Dec: 58K"></div>
+        </div>
+        <div style="display:flex;justify-content:space-between;margin-top:8px;font-size:0.72rem;color:var(--text-muted);">
+          <span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span>
+        </div>
+        <div style="margin-top:14px;padding:10px;background:rgba(34,197,94,0.08);border:1px solid rgba(34,197,94,0.2);border-radius:var(--radius-sm);font-size:0.82rem;color:#22c55e;">
+          ↑ +164% total traffic growth year over year
+        </div>
+      </div>
+    </div>
+
+    <!-- Performance Summary -->
+    <div class="chart-container reveal" style="margin-bottom:24px;">
+      <div class="chart-title"><span>📊 Campaign Performance Summary (Q1 2025)</span><span style="font-size:0.8rem;color:var(--text-muted);">Last updated: 2025-03-28</span></div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
+        <div style="padding:16px;background:var(--bg-glass2);border:1px solid var(--border);border-radius:var(--radius-sm);text-align:center;">
+          <div style="font-size:1.8rem;font-weight:800;font-family:var(--font-heading);background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">+320%</div>
+          <div style="font-size:0.78rem;color:var(--text-muted);margin-top:4px;">Organic Traffic</div>
+        </div>
+        <div style="padding:16px;background:var(--bg-glass2);border:1px solid var(--border);border-radius:var(--radius-sm);text-align:center;">
+          <div style="font-size:1.8rem;font-weight:800;font-family:var(--font-heading);color:var(--secondary-light);">5.2x</div>
+          <div style="font-size:0.78rem;color:var(--text-muted);margin-top:4px;">Google Ads ROAS</div>
+        </div>
+        <div style="padding:16px;background:var(--bg-glass2);border:1px solid var(--border);border-radius:var(--radius-sm);text-align:center;">
+          <div style="font-size:1.8rem;font-weight:800;font-family:var(--font-heading);color:var(--accent);">42.8%</div>
+          <div style="font-size:0.78rem;color:var(--text-muted);margin-top:4px;">Email Open Rate</div>
+        </div>
+        <div style="padding:16px;background:var(--bg-glass2);border:1px solid var(--border);border-radius:var(--radius-sm);text-align:center;">
+          <div style="font-size:1.8rem;font-weight:800;font-family:var(--font-heading);color:#22c55e;">+213%</div>
+          <div style="font-size:0.78rem;color:var(--text-muted);margin-top:4px;">Revenue Growth</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lead Activity Heatmap -->
+    <div class="chart-container reveal">
+      <div class="chart-title">📧 Lead Activity Heatmap — Last 10 Weeks</div>
+      <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:20px;">Each cell = 1 day. Darker = higher lead volume. Hover for details.</p>
+      <div class="map-grid">
+        <script>
+          ;(function(){let h='';for(let i=0;i<70;i++){const r=Math.random();let cl='';if(r>.85)cl='hot4';else if(r>.65)cl='hot3';else if(r>.4)cl='hot2';else if(r>.2)cl='hot1';h+=`<div class="map-cell ${cl}" title="Day ${i+1}: ${Math.round(r*30)} leads generated"></div>`;}document.write(h);})();
+        </script>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;margin-top:16px;justify-content:flex-end;">
+        <span style="font-size:0.75rem;color:var(--text-muted);">Fewer leads</span>
+        <div style="width:12px;height:12px;border-radius:2px;background:rgba(0,212,170,0.08);"></div>
+        <div style="width:12px;height:12px;border-radius:2px;background:rgba(0,212,170,0.2);"></div>
+        <div style="width:12px;height:12px;border-radius:2px;background:rgba(0,212,170,0.4);"></div>
+        <div style="width:12px;height:12px;border-radius:2px;background:rgba(0,212,170,0.65);"></div>
+        <div style="width:12px;height:12px;border-radius:2px;background:rgba(0,212,170,0.9);"></div>
+        <span style="font-size:0.75rem;color:var(--text-muted);">Peak leads</span>
+      </div>
+    </div>
+  </main>
+</div>
+
+<button id="scrollTop">↑</button>
+<script src="js/main.js"></script>
+<script>
+  document.getElementById('lastUpdated2').textContent=new Date().toLocaleTimeString('en-IN',{hour:'2-digit',minute:'2-digit'})+', '+new Date().toLocaleDateString('en-IN');
+  const dt=document.getElementById('dropdownTrigger'),nd=document.getElementById('navDropdown');
+  if(dt){dt.addEventListener('click',e=>{e.stopPropagation();nd.classList.toggle('open')});document.addEventListener('click',()=>nd.classList.remove('open'));}
+  const urlParams = new URLSearchParams(window.location.search);
+  const emailParam = urlParams.get('email');
+  if (emailParam) {
+    document.getElementById('userEmailDisplay').textContent = emailParam;
+    document.getElementById('userInitial').textContent = emailParam.charAt(0).toUpperCase();
+  }
+</script>
+</body></html>

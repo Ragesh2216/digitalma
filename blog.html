@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Marketing Blog — PixelRise Digital</title>
+  <meta name="description" content="Expert insights on SEO, PPC advertising, social media marketing, content strategy, and email automation from PixelRise Digital's marketing team." />
+  <link rel="stylesheet" href="css/style.css" /><link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+<div id="preloader"><div class="preloader-inner"><img src="logo.webp" alt="PixelRise Digital" class="preloader-logo" style="height:48px; width:auto; margin:0 auto;"><div class="preloader-bar"><div class="preloader-bar-fill"></div></div></div></div>
+
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand"><img src="logo.webp" alt="PixelRise Digital" style="height:36px; width:auto;"></a>
+  <div class="navbar-links">
+    <a href="index.html">Home</a><a href="about.html">About</a>
+    <a href="services.html">Services</a><a href="case-studies.html">Case Studies</a>
+    <a href="blog.html" class="active">Blog</a><a href="contact.html">Contact</a>
+    <div style="display:flex; gap:10px; margin-left:14px;">
+      <a href="login.html" class="btn btn-ghost btn-sm" style="padding:7px 16px; border-radius:var(--radius-pill);">Login</a>
+      <a href="register.html" class="btn btn-primary btn-sm" style="padding:7px 16px; border-radius:var(--radius-pill);">Get Started</a>
+    </div>
+  </div>
+  <button class="navbar-mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
+</nav>
+<div class="navbar-mobile" id="mobileNav">
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+  <a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+  <div class="mobile-access-section" style="display:flex; flex-direction:column; gap:10px; padding:15px; border-top:1px solid rgba(255,255,255,0.05); margin-top:10px;">
+    <a href="login.html" class="btn btn-outline" style="width:100%; justify-content:center;">Login</a>
+    <a href="register.html" class="btn btn-primary" style="width:100%; justify-content:center;">Get Started</a>
+  </div>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-content">
+    <div class="section-tag" style="margin:0 auto 20px;">Insights & Guides</div>
+    <h1 class="section-title">Digital Marketing <span>Insights Blog</span></h1>
+    <p class="section-subtitle" style="margin:0 auto 32px;">Expert guides, strategy breakdowns, and actionable tips from PixelRise Digital's marketing specialists — helping you stay ahead in SEO, PPC, social media, and beyond.</p>
+    <div style="max-width:800px; margin:0 auto; border-radius:var(--radius); overflow:hidden; box-shadow:var(--shadow-card); border:1px solid var(--border);">
+      <img src="hero_dm.webp" alt="Digital Marketing Blog" style="width:100%; height:auto; display:block;">
+    </div>
+  </div>
+</section>
+
+<!-- BLOG FILTER CATEGORIES -->
+<section class="section-sm" style="background:var(--bg-card);border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;" id="blogFilter">
+      <button class="btn btn-primary btn-sm blog-filter-btn active" data-filter="all">All Posts</button>
+      <button class="btn btn-outline btn-sm blog-filter-btn" data-filter="seo">SEO</button>
+      <button class="btn btn-outline btn-sm blog-filter-btn" data-filter="ppc">PPC & Ads</button>
+      <button class="btn btn-outline btn-sm blog-filter-btn" data-filter="social">Social Media</button>
+      <button class="btn btn-outline btn-sm blog-filter-btn" data-filter="content">Content</button>
+      <button class="btn btn-outline btn-sm blog-filter-btn" data-filter="analytics">Analytics</button>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG POSTS -->
+<section class="section">
+  <div class="container">
+    <div class="grid-3" id="blogGrid">
+
+      <div class="card reveal" style="overflow:hidden;padding:0;" data-category="seo">
+        <img src="seo_dm.webp" alt="SEO Strategy Guide" style="width:100%;height:180px;object-fit:cover;display:block;">
+        <div style="padding:24px;">
+          <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;">
+            <span class="badge badge-primary" style="font-size:0.72rem;">SEO</span>
+            <span style="font-size:0.75rem;color:var(--text-muted);">12 min read · March 28, 2025</span>
+          </div>
+          <h3 class="card-title" style="font-size:1rem;">The Ultimate On-Page SEO Checklist for 2025 — 47 Points You Cannot Miss</h3>
+          <p class="card-text" style="font-size:0.85rem;">A comprehensive walkthrough of every on-page SEO factor that impacts rankings in 2025, from Core Web Vitals to E-E-A-T signals and semantic keyword clustering.</p>
+          <a href="contact.html" style="color:var(--primary);font-size:0.85rem;font-weight:600;margin-top:16px;display:inline-block;">Read Article →</a>
+        </div>
+      </div>
+
+      <div class="card reveal reveal-delay-1" style="overflow:hidden;padding:0;" data-category="ppc">
+        <img src="ppc_dm.webp" alt="Google Ads Guide" style="width:100%;height:180px;object-fit:cover;display:block;">
+        <div style="padding:24px;">
+          <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;">
+            <span class="badge badge-yellow" style="font-size:0.72rem;">PPC & Ads</span>
+            <span style="font-size:0.75rem;color:var(--text-muted);">9 min read · March 21, 2025</span>
+          </div>
+          <h3 class="card-title" style="font-size:1rem;">How to Achieve 5x ROAS on Google Shopping Ads in 2025</h3>
+          <p class="card-text" style="font-size:0.85rem;">Step-by-step guide to optimizing Google Shopping campaigns, feed quality, bidding strategies, and audience layering to maximize return on ad spend.</p>
+          <a href="contact.html" style="color:var(--primary);font-size:0.85rem;font-weight:600;margin-top:16px;display:inline-block;">Read Article →</a>
+        </div>
+      </div>
+
+      <div class="card reveal reveal-delay-2" style="overflow:hidden;padding:0;" data-category="social">
+        <img src="about_dm.webp" alt="Instagram Strategy Guide" style="width:100%;height:180px;object-fit:cover;display:block;">
+        <div style="padding:24px;">
+          <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;">
+            <span class="badge badge-purple" style="font-size:0.72rem;">Social Media</span>
+            <span style="font-size:0.75rem;color:var(--text-muted);">7 min read · March 15, 2025</span>
+          </div>
+          <h3 class="card-title" style="font-size:1rem;">Instagram Reels vs Stories vs Feed: The 2025 Content Strategy Guide</h3>
+          <p class="card-text" style="font-size:0.85rem;">Which Instagram format drives more reach, engagement, and sales in 2025? Data from 50+ brand accounts reveals the optimal content mix for growth.</p>
+          <a href="contact.html" style="color:var(--primary);font-size:0.85rem;font-weight:600;margin-top:16px;display:inline-block;">Read Article →</a>
+        </div>
+      </div>
+
+      <div class="card reveal" style="overflow:hidden;padding:0;" data-category="content">
+        <img src="services_dm.webp" alt="Content Marketing Guide" style="width:100%;height:180px;object-fit:cover;display:block;">
+        <div style="padding:24px;">
+          <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;">
+            <span class="badge badge-primary" style="font-size:0.72rem;">Content</span>
+            <span style="font-size:0.75rem;color:var(--text-muted);">11 min read · March 10, 2025</span>
+          </div>
+          <h3 class="card-title" style="font-size:1rem;">Content Clusters vs Pillar Pages: Which Strategy Ranks Faster in 2025?</h3>
+          <p class="card-text" style="font-size:0.85rem;">A deep dive into semantic content architecture, topic authority, and internal linking structures that drive exponential organic growth for B2B and B2C brands.</p>
+          <a href="contact.html" style="color:var(--primary);font-size:0.85rem;font-weight:600;margin-top:16px;display:inline-block;">Read Article →</a>
+        </div>
+      </div>
+
+      <div class="card reveal reveal-delay-1" style="overflow:hidden;padding:0;" data-category="analytics">
+        <img src="hero_dm.webp" alt="GA4 Analytics Guide" style="width:100%;height:180px;object-fit:cover;display:block;">
+        <div style="padding:24px;">
+          <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;">
+            <span class="badge" style="font-size:0.72rem;background:rgba(6,182,212,0.1);color:var(--accent);border:1px solid rgba(6,182,212,0.3);">Analytics</span>
+            <span style="font-size:0.75rem;color:var(--text-muted);">14 min read · March 5, 2025</span>
+          </div>
+          <h3 class="card-title" style="font-size:1rem;">GA4 for Marketers: The Complete 2025 Setup and Reporting Guide</h3>
+          <p class="card-text" style="font-size:0.85rem;">From event tracking to conversion modeling, explore how to configure Google Analytics 4 to give you the marketing attribution clarity your business needs.</p>
+          <a href="contact.html" style="color:var(--primary);font-size:0.85rem;font-weight:600;margin-top:16px;display:inline-block;">Read Article →</a>
+        </div>
+      </div>
+
+      <div class="card reveal reveal-delay-2" style="overflow:hidden;padding:0;" data-category="seo">
+        <img src="seo_dm.webp" alt="Local SEO Guide" style="width:100%;height:180px;object-fit:cover;display:block;">
+        <div style="padding:24px;">
+          <div style="display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;">
+            <span class="badge badge-primary" style="font-size:0.72rem;">SEO</span>
+            <span style="font-size:0.75rem;color:var(--text-muted);">8 min read · February 28, 2025</span>
+          </div>
+          <h3 class="card-title" style="font-size:1rem;">Local SEO in India: How to Dominate Google Maps and "Near Me" Searches</h3>
+          <p class="card-text" style="font-size:0.85rem;">A practical guide to Google Business Profile optimization, local citations, review management, and geo-targeted content for Indian businesses.</p>
+          <a href="contact.html" style="color:var(--primary);font-size:0.85rem;font-weight:600;margin-top:16px;display:inline-block;">Read Article →</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Newsletter Signup -->
+    <div class="card reveal" style="margin-top:64px;text-align:center;padding:48px;">
+      <div class="section-tag" style="margin:0 auto 20px;">Newsletter</div>
+      <h2 class="section-title" style="font-size:1.8rem;">Get Weekly Marketing <span>Insights</span></h2>
+      <p class="section-subtitle" style="margin:0 auto 32px;max-width:480px;">Join 12,000+ marketers who receive PixelRise's weekly digest of SEO tips, PPC hacks, and social media strategies.</p>
+      <form style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;" onsubmit="event.preventDefault();this.innerHTML='<div style=\'color:#22c55e;font-weight:600;\'>✓ Subscribed! Check your inbox.</div>'">
+        <input type="email" class="form-control" placeholder="your@email.com" required style="max-width:280px;" />
+        <button type="submit" class="btn btn-primary">Subscribe Free →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer><div class="container-wide">
+  <div class="footer-grid">
+    <div><img src="logo.webp" alt="PixelRise Digital" class="footer-brand" style="height:40px; width:auto; margin-bottom:14px;"><p class="footer-desc">Expert digital marketing insights — SEO, PPC, social media, content strategies from the PixelRise team.</p><p style="font-size:.82rem;color:var(--text-muted);margin-bottom:16px;">📍 PixelRise Digital · Salem, India</p><div class="footer-socials"><a href="404.html" class="footer-social-btn">𝕏</a><a href="404.html" class="footer-social-btn">in</a><a href="404.html" class="footer-social-btn">📸</a></div></div>
+    <div><div class="footer-col-title">Services</div><div class="footer-links"><a href="services.html">SEO</a><a href="services.html">PPC & Ads</a><a href="services.html">Social Media</a><a href="services.html">Content</a></div></div>
+    <div><div class="footer-col-title">Company</div><div class="footer-links"><a href="about.html">About</a><a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a></div></div>
+    <div><div class="footer-col-title">Legal</div><div class="footer-links"><a href="404.html">Privacy</a><a href="404.html">Terms</a><a href="404.html">Google Partner</a><a href="404.html">Meta Partner</a></div></div>
+  </div>
+  <div class="footer-bottom"><span>© 2025 PixelRise Digital. All rights reserved.</span><span>📍 Salem, India</span></div>
+</div></footer>
+<button id="scrollTop">↑</button>
+<script src="js/main.js"></script>
+<script>
+  const dt=document.getElementById('dropdownTrigger'),nd=document.getElementById('navDropdown');
+  if(dt){dt.addEventListener('click',e=>{e.stopPropagation();nd.classList.toggle('open')});document.addEventListener('click',()=>nd.classList.remove('open'));}
+  // Blog filter
+  document.querySelectorAll('.blog-filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.blog-filter-btn').forEach(b => {b.classList.remove('active','btn-primary');b.classList.add('btn-outline');});
+      btn.classList.add('active','btn-primary');btn.classList.remove('btn-outline');
+      const f = btn.dataset.filter;
+      document.querySelectorAll('#blogGrid .card').forEach(card => {
+        card.style.display = (f === 'all' || card.dataset.category === f) ? '' : 'none';
+      });
+    });
+  });
+</script>
+</body></html>

@@ -1,0 +1,118 @@
+/* =========================================================
+   BioTech - Stackly  — Responsive Styles
+   ========================================================= */
+
+/* ── Large Desktop – 1400px+ ─────────────────────────── */
+@media (max-width: 1400px) {
+  .hero-visual { width: 400px; right: 3%; }
+}
+
+/* ── Desktop 1200px ─────────────────────────────────── */
+@media (max-width: 1200px) {
+  .section { padding: 70px 4%; }
+  .section-lg { padding: 90px 4%; }
+  .hero { padding: calc(var(--nav-height) + 30px) 4% 70px; }
+
+  .hero-title { font-size: clamp(2rem, 5vw, 3.5rem); }
+  .hero-visual { width: 340px; }
+
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+
+  .metrics-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .footer-grid { grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 32px; }
+}
+
+/* ── Tablet 1024px ───────────────────────────────────── */
+@media (max-width: 1024px) {
+  :root { --nav-height: 64px; }
+
+  .navbar-links { display: none; }
+  .navbar-mobile-toggle { display: flex; }
+
+  .hero { flex-direction: column; text-align: center; align-items: center; }
+  .hero-content { max-width: 100%; }
+  .hero-actions { justify-content: center; }
+  .hero-desc { max-width: 100%; }
+  .hero-visual {
+    position: relative;
+    right: auto; top: auto; transform: none;
+    width: 100%; max-width: 420px;
+    margin-top: 48px;
+  }
+
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .grid-2 { grid-template-columns: 1fr; }
+
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+
+  .dashboard-layout { grid-template-columns: 1fr; }
+  .dashboard-sidebar {
+    position: static;
+    height: auto;
+    display: flex; flex-wrap: wrap; gap: 8px;
+    padding: 16px 20px;
+  }
+  .sidebar-nav-item { flex: 0 0 auto; margin-bottom: 0; }
+  .dashboard-main { padding: 20px; }
+}
+
+/* ── Tablet Small 768px ─────────────────────────────── */
+@media (max-width: 768px) {
+  .section { padding: 60px 5%; }
+  .section-sm { padding: 40px 5%; }
+  .section-lg { padding: 70px 5%; }
+
+  .section-title { font-size: clamp(1.6rem, 5vw, 2.4rem); }
+
+  .hero-label { font-size: 0.75rem; }
+  .hero-title { font-size: clamp(1.8rem, 6vw, 2.8rem); }
+  .hero-desc { font-size: 1rem; }
+  .hero-actions { flex-direction: column; align-items: center; width: 100%; }
+  .hero-actions .btn { width: 100%; max-width: 300px; justify-content: center; }
+
+  .grid-3 { grid-template-columns: 1fr; }
+
+  .cta-banner { padding: 48px 28px; }
+
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+
+  .metrics-grid { grid-template-columns: 1fr 1fr; }
+
+  .pricing-card { margin-bottom: 16px; }
+}
+
+/* ── Mobile 480px ───────────────────────────────────── */
+@media (max-width: 480px) {
+  :root { --nav-height: 60px; }
+
+  .navbar { padding: 0 4%; }
+  .navbar-brand { font-size: 1.25rem; }
+  .navbar-brand .brand-icon { width: 32px; height: 32px; font-size: 15px; }
+
+  .section { padding: 50px 4%; }
+
+  .hero { padding: calc(var(--nav-height) + 24px) 4% 60px; }
+  .hero-title { font-size: 1.85rem; }
+
+  .grid-4 { grid-template-columns: 1fr; }
+  .grid-3 { grid-template-columns: 1fr; }
+
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+
+  .metrics-grid { grid-template-columns: 1fr; }
+
+  .card { padding: 22px 18px; }
+  .cta-banner { padding: 36px 20px; }
+  .btn-lg { padding: 14px 28px; font-size: 0.95rem; }
+
+  #scrollTop { bottom: 20px; right: 20px; width: 40px; height: 40px; }
+}
+
+/* ── Mobile Small 320px ────────────────────────────── */
+@media (max-width: 360px) {
+  .hero-title { font-size: 1.6rem; }
+  .section-title { font-size: 1.5rem; }
+  .pricing-price { font-size: 2.2rem; }
+}

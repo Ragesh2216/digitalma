@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Page Not Found | PixelRise Digital</title>
+  <link rel="stylesheet" href="css/style.css" /><link rel="stylesheet" href="css/responsive.css" />
+  <style>
+    .error-num{font-family:var(--font-heading);font-size:clamp(8rem,20vw,16rem);font-weight:800;background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;display:block;}
+    .float-orb{animation:float 4s ease-in-out infinite;}
+    @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-18px);}}
+  </style>
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand"><img src="logo.webp" alt="PixelRise Digital" style="height:36px; width:auto;"></a>
+  <div class="navbar-links">
+    <a href="index.html">Home</a><a href="about.html">About</a>
+    <a href="services.html">Services</a><a href="case-studies.html">Case Studies</a>
+    <a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+    <div style="display:flex; gap:10px; margin-left:14px;">
+      <a href="login.html" class="btn btn-ghost btn-sm" style="padding:7px 16px; border-radius:var(--radius-pill);">Login</a>
+      <a href="register.html" class="btn btn-primary btn-sm" style="padding:7px 16px; border-radius:var(--radius-pill);">Get Started</a>
+    </div>
+  </div>
+  <button class="navbar-mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
+</nav>
+<div class="navbar-mobile" id="mobileNav">
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+  <a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+  <div class="mobile-access-section" style="display:flex;flex-direction:column;gap:10px;padding:15px;border-top:1px solid rgba(255,255,255,0.05);margin-top:10px;">
+    <a href="login.html" class="btn btn-outline" style="width:100%;justify-content:center;">Login</a>
+    <a href="register.html" class="btn btn-primary" style="width:100%;justify-content:center;">Get Started</a>
+  </div>
+</div>
+
+<section style="min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:var(--gradient-hero);padding:calc(var(--nav-height)+60px) 5% 80px;position:relative;overflow:hidden;">
+  <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(0,212,170,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,170,0.03) 1px,transparent 1px);background-size:60px 60px;"></div>
+  <div style="position:absolute;top:-150px;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(circle,rgba(0,212,170,0.07) 0%,transparent 70%);pointer-events:none;"></div>
+  <div style="position:relative; z-index:10; padding-top:50px;">
+    <div class="float-orb" style="margin-bottom:16px;"><span class="error-num">404</span></div>
+    <div style="font-size:4rem;margin-bottom:16px;">📊</div>
+    <h1 style="font-family:var(--font-heading);font-size:clamp(1.5rem,4vw,2.5rem);font-weight:700;margin-bottom:16px;">This Campaign URL Doesn't Exist</h1>
+    <p style="color:var(--text-secondary);font-size:1.05rem;max-width:480px;margin:0 auto 40px;line-height:1.7;">The page you're looking for has gone offline. It may have been moved, renamed, or the URL might be incorrect. Let's get you back on track.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:60px;">
+      <a href="index.html" class="btn btn-primary">← Back to Home</a>
+      <a href="contact.html" class="btn btn-outline">Contact Support</a>
+    </div>
+    <div>
+      <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:20px;">You might be looking for:</p>
+      <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+        <a href="services.html" class="tag">Our Services</a>
+        <a href="case-studies.html" class="tag">Case Studies</a>
+        <a href="blog.html" class="tag">Blog</a>
+        <a href="about.html" class="tag">About Us</a>
+        <a href="contact.html" class="tag">Get Free Audit</a>
+        <a href="login.html" class="tag">Marketing Portal</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="js/main.js"></script>
+<script>
+  const dt=document.getElementById('dropdownTrigger'),nd=document.getElementById('navDropdown');
+  if(dt){dt.addEventListener('click',e=>{e.stopPropagation();nd.classList.toggle('open')});document.addEventListener('click',()=>nd.classList.remove('open'));}
+</script>
+</body></html>
