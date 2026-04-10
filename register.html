@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register — AdVantage Digital Marketing Suite</title>
+  <meta name="description" content="Create an AdVantage client account to access SEO analytics, campaign management, social media tools, and enterprise digital marketing solutions." />
+  <link rel="stylesheet" href="css/style.css" /><link rel="stylesheet" href="css/responsive.css" />
+  <style>
+    .auth-page{min-height:100vh;display:flex;align-items:center;justify-content:center;background:var(--gradient-hero);position:relative;overflow:hidden;padding:calc(var(--nav-height) + 40px) 5% 60px;}
+    .auth-page::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(0,212,170,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,212,170,0.03) 1px,transparent 1px);background-size:60px 60px;}
+    .auth-container{display:grid;grid-template-columns:1fr 1fr;gap:60px;max-width:1000px;width:100%;z-index:2;}
+    @media(max-width:768px){.auth-container{grid-template-columns:1fr;}.auth-info{display:none;}}
+    .auth-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--radius-lg);padding:44px 40px;}
+    @media(max-width:480px){.auth-card{padding:32px 24px;}}
+    .portal-type-badge{display:inline-flex;align-items:center;gap:8px;background:var(--bg-glass2);border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 14px;font-size:0.8rem;color:var(--text-secondary);margin-bottom:24px;}
+    .password-wrap{position:relative;}
+    .password-toggle{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--text-muted);cursor:pointer;font-size:1rem;}
+    .strength-bar{height:4px;border-radius:2px;background:var(--border);margin-top:6px;overflow:hidden;}
+    .strength-fill{height:100%;border-radius:2px;width:0;transition:var(--transition);}
+  </style>
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand"><img src="logo.webp" alt="PixelRise Digital" style="height:36px; width:auto;"></a>
+  <div class="navbar-links">
+    <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+    <a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+    <div style="display:flex; gap:10px; margin-left:14px;">
+      <a href="login.html" class="btn btn-ghost btn-sm" style="padding:7px 16px; border-radius:var(--radius-pill);">Login</a>
+      <a href="register.html" class="btn btn-primary btn-sm" style="padding:7px 16px; border-radius:var(--radius-pill);">Get Started</a>
+    </div>
+  </div>
+  <button class="navbar-mobile-toggle" id="mobileToggle"><span></span><span></span><span></span></button>
+</nav>
+<div class="navbar-mobile" id="mobileNav">
+  <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+  <a href="case-studies.html">Case Studies</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a>
+  <div class="mobile-access-section" style="display:flex;flex-direction:column;gap:10px;padding:15px;border-top:1px solid rgba(255,255,255,0.05);margin-top:10px;">
+    <a href="login.html" class="btn btn-outline" style="width:100%;justify-content:center;">Login</a>
+    <a href="register.html" class="btn btn-primary" style="width:100%;justify-content:center;">Get Started</a>
+  </div>
+</div>
+
+<div class="auth-page">
+  <div style="position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(249,115,22,0.08) 0%,transparent 70%);pointer-events:none;"></div>
+  <div style="position:absolute;bottom:-100px;left:-100px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(236,72,153,0.07) 0%,transparent 70%);pointer-events:none;"></div>
+
+  <div class="auth-container">
+    <!-- Info side -->
+    <div class="auth-info" style="display:flex;flex-direction:column;justify-content:center;gap:32px;">
+      <div>
+        <div class="section-tag" style="margin-bottom:16px;">Join AdVantage</div>
+        <h2 style="font-family:var(--font-heading);font-size:2.2rem;font-weight:700;line-height:1.2;margin-bottom:16px;">
+          Scale your brand<br><span style="background:var(--gradient-primary);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">with data-driven marketing</span>
+        </h2>
+        <p style="color:var(--text-secondary);line-height:1.7;">Create a client account to access our enterprise digital marketing suite, track campaign performance, manage social media, and view real-time ROI analytics.</p>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="display:flex;align-items:center;gap:14px;">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--gradient-primary);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;">📈</div>
+          <div><div style="font-size:0.9rem;font-weight:600;">SEO & Organic Growth</div><div style="font-size:0.8rem;color:var(--text-muted);">Keyword tracking, backlink analysis, and rank monitoring across search engines</div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--gradient-primary);display:flex;align-items:center;justify-content:center;flex-shrink:0;">📱</div>
+          <div><div style="font-size:0.9rem;font-weight:600;">Social Media Management</div><div style="font-size:0.8rem;color:var(--text-muted);">Schedule posts, engage audiences, and measure engagement across all platforms</div></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;">
+          <div style="width:40px;height:40px;border-radius:50%;background:var(--gradient-primary);display:flex;align-items:center;justify-content:center;flex-shrink:0;">💰</div>
+          <div><div style="font-size:0.9rem;font-weight:600;">PPC & Ad Intelligence</div><div style="font-size:0.8rem;color:var(--text-muted);">Google Ads, Meta campaigns, and real-time bid optimization dashboards</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Auth card -->
+    <div class="auth-card">
+      <div class="portal-type-badge">🚀 Digital Marketing Registration</div>
+      <form id="customerSignupForm">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div class="form-group" style="margin-bottom:0;"><label class="form-label">First Name *</label><input type="text" class="form-control" placeholder="Sarah" required /></div>
+          <div class="form-group" style="margin-bottom:0;"><label class="form-label">Last Name *</label><input type="text" class="form-control" placeholder="Chen" required /></div>
+        </div>
+        <div class="form-group" style="margin-top:14px;"><label class="form-label">Email *</label><input type="email" class="form-control" placeholder="marketing@brand.com" required /></div>
+        <div class="form-group"><label class="form-label">Company / Organisation</label><input type="text" class="form-control" placeholder="DigitalBoost Agency" /></div>
+        <div class="form-group"><label class="form-label">Industry / Vertical</label>
+          <select class="form-control" style="background:var(--bg-card);color:var(--text-primary);">
+            <option value="" style="background:var(--bg-card);">Select your industry…</option>
+            <option style="background:var(--bg-card);">E-commerce & Retail</option>
+            <option style="background:var(--bg-card);">SaaS & Technology</option>
+            <option style="background:var(--bg-card);">Healthcare & Wellness</option>
+            <option style="background:var(--bg-card);">Real Estate & Property</option>
+            <option style="background:var(--bg-card);">Education & EdTech</option>
+            <option style="background:var(--bg-card);">Hospitality & Travel</option>
+            <option style="background:var(--bg-card);">Other</option>
+          </select>
+        </div>
+        <div class="form-group"><label class="form-label">Password * <span style="font-weight:normal;color:var(--text-muted);">(min. 6 chars)</span></label>
+          <div class="password-wrap">
+            <input type="password" class="form-control" id="signupPass" placeholder="••••••••" required style="padding-right:44px;" minlength="6"/>
+            <button type="button" class="password-toggle" onclick="const f=this.previousElementSibling;f.type=f.type==='password'?'text':'password'">👁</button>
+          </div>
+          <div class="strength-bar"><div class="strength-fill" id="strengthFill"></div></div>
+          <div style="font-size:0.72rem;color:var(--text-muted);margin-top:4px;" id="strengthLabel"></div>
+        </div>
+        <div class="form-group"><label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer;font-size:0.82rem;color:var(--text-secondary);">
+          <input type="checkbox" required style="margin-top:2px;accent-color:var(--primary);" />
+          I agree to the <a href="404.html" style="color:var(--primary);">Terms of Service</a> and <a href="404.html" style="color:var(--primary);">Privacy Policy</a>
+        </label></div>
+        <div class="form-success" style="display:none;padding:10px;background:rgba(34,197,94,0.1);border:1px solid #22c55e;border-radius:var(--radius-sm);color:#22c55e;font-size:0.86rem;margin-bottom:12px;">✓ Account created! Redirecting to Portal Login…</div>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">Create Account →</button>
+      </form>
+      <div style="margin-top:24px;text-align:center;font-size:0.85rem;color:var(--text-secondary);">
+        Already have an account? <a href="login.html" style="color:var(--primary);font-weight:600;">Sign In Instead</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+  const signupPass=document.getElementById('signupPass'),strengthFill=document.getElementById('strengthFill'),strengthLabel=document.getElementById('strengthLabel');
+  if(signupPass){signupPass.addEventListener('input',()=>{const v=signupPass.value;let s=0;if(v.length>=6)s++;if(v.length>=10)s++;if(/[A-Z]/.test(v))s++;if(/[0-9]/.test(v))s++;if(/[^A-Za-z0-9]/.test(v))s++;const c=['#ef4444','#f59e0b','#eab308','#22c55e','#00d4aa'];const l=['Very Weak','Weak','Fair','Strong','Very Strong'];strengthFill.style.width=(s*20)+'%';strengthFill.style.background=c[Math.min(s-1,4)]||'#ef4444';strengthLabel.textContent=v.length?l[Math.min(s-1,4)]:'';}); }
+  const signupForm=document.getElementById('customerSignupForm');
+  if(signupForm){signupForm.addEventListener('submit',function(e){if(this.checkValidity()){e.preventDefault();const email=this.querySelector('input[type="email"]').value;this.querySelector('.form-success').style.display='block';this.querySelector('button[type="submit"]').disabled=true;setTimeout(()=>window.location.href=`login.html?email=${encodeURIComponent(email)}`,1200);}});}
+</script>
+</body>
+</html>
